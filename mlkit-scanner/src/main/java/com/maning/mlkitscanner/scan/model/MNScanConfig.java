@@ -55,7 +55,7 @@ public class MNScanConfig implements Serializable {
     private int gridScanLineHeight;
     //显示闪光灯
     private boolean showLightController = true;
-    //是否需要全屏扫描，默认值扫描扫描框中的二维码
+    //是否需要全屏扫描，默认全屏扫描
     private boolean isFullScreenScan = true;
     //扫描二维码中心点宽高
     private int resultPointWithdHeight = 0;

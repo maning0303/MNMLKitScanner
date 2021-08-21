@@ -39,5 +39,6 @@ dependencies {
 
     //扫码核心库
     implementation project(path: ':mlkit-scanner')
+//    implementation 'com.github.maning0303:MNMLKitScanner:V1.0.0'
 
 }

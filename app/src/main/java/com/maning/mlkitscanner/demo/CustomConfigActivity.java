@@ -251,7 +251,7 @@ public class CustomConfigActivity extends AppCompatActivity implements View.OnCl
                 .setGridScanLineColumn(TextUtils.isEmpty(mEtGridlineNum.getText().toString()) ? 30 : Integer.parseInt(mEtGridlineNum.getText().toString()))
                 //网格高度
                 .setGridScanLineHeight(TextUtils.isEmpty(mEtGridlineHeight.getText().toString()) ? 0 : Integer.parseInt(mEtGridlineHeight.getText().toString()))
-                //是否全屏扫描,默认只扫描扫描框内的二维码
+                //是否全屏扫描,默认全屏
                 .setFullScreenScan(mCbFullscreenScan.isChecked())
                 //单位dp
                 .setResultPointConfigs(36, 12, 3, colorResultPointStroke, colorResultPoint)
