@@ -1,6 +1,6 @@
 #   MNMLKitScanner 快速集成二维码扫描,速度比zxing快
 
-##  快速集成二维码扫描，速度比zxing快，可配置相册，闪光灯，相机可以调整焦距放大缩小，自定义扫描线颜色，自定义背景颜色，自定义遮罩层，支持同时扫多个二维码和条形码
+##  基于Google ML Kit 快速集成二维码扫描，速度比zxing快，可配置相册，闪光灯，相机可以调整焦距放大缩小，自定义扫描线颜色，自定义背景颜色，自定义遮罩层，支持同时扫多个二维码和条形码
 
 ##  功能：
     1：二维码扫描，手势缩放，无拉伸，样式自定义
@@ -14,9 +14,9 @@
 
 <div align="center">
 <img src = "screenshots/mn_mlkit_scanner_ss_01.jpg" width=200 >
-<img src = "screenshots/mn_mlkit_scanner_ss_02.jpeg" width=200 >
-<img src = "screenshots/mn_mlkit_scanner_ss_03.png" width=200 >
-<img src = "screenshots/mn_mlkit_scanner_ss_04.jpeg" width=200 >
+<img src = "screenshots/mn_mlkit_scanner_ss_02.jpg" width=200 >
+<img src = "screenshots/mn_mlkit_scanner_ss_03.jpg" width=200 >
+<img src = "screenshots/mn_mlkit_scanner_ss_04.jpg" width=200 >
 </div>
 
 
