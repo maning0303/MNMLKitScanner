@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_act_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scan.ui.ScanPreviewActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.maning.mlkitscanner.scan.view.ViewfinderView
+        android:id="@+id/viewfinderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/fakeStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#00000000"
+            tools:ignore="MissingConstraints" />
+
+        <!--功能菜单-->
+        <com.maning.mlkitscanner.scan.view.ScanActionMenuView
+            android:id="@+id/action_menu_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.maning.mlkitscanner.scan.view.ScanResultPointView
+        android:id="@+id/result_point_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone" />
+
+</RelativeLayout>
