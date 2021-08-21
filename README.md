@@ -22,11 +22,11 @@
 
 ## 感谢：
 
-[mlkit](https://github.com/googlesamples/mlkit)
+[googlesamples/mlkit](https://github.com/googlesamples/mlkit)
 
-[MLKit](https://github.com/jenly1314/MLKit)
+[jenly1314/MLKit](https://github.com/jenly1314/MLKit)
 
-[StatusBarUtil](https://github.com/Ye-Miao/StatusBarUtil)
+[Ye-Miao/StatusBarUtil](https://github.com/Ye-Miao/StatusBarUtil)
 
 感谢所有开源的人；
 
