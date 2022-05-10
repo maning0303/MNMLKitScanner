@@ -1,9 +1,6 @@
 apply plugin: 'com.android.library'
 
 def versions = rootProject.ext.versions
-def appId = rootProject.ext.appId
-def dependenciesGoogle = rootProject.ext.dependenciesGoogle
-def dependenciesOther = rootProject.ext.dependenciesOther
 
 android {
     compileSdkVersion versions.compileSdkVersion
@@ -29,16 +26,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    compileOnly 'androidx.appcompat:appcompat:1.1.0'
 
-    implementation 'com.google.mlkit:barcode-scanning:16.2.0'
-    def camerax_version = '1.0.1';
-    // The following line is optional, as the core library is included indirectly by camera-camera2
-    implementation "androidx.camera:camera-core:${camerax_version}"
-    implementation "androidx.camera:camera-camera2:${camerax_version}"
-    // If you want to additionally use the CameraX Lifecycle library
-    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
-    // If you want to additionally use the CameraX View class
-    implementation "androidx.camera:camera-view:1.0.0-alpha25"
+    compileOnly 'com.google.mlkit:barcode-scanning:17.0.0'
+    compileOnly "androidx.camera:camera-core:1.0.2"
+    compileOnly "androidx.camera:camera-camera2:1.0.2"
+    compileOnly "androidx.camera:camera-lifecycle:1.0.2"
+    compileOnly "androidx.camera:camera-view:1.0.0-alpha25"
 
 }
