@@ -55,7 +55,7 @@
                    public void onActivityResult(int resultCode, Intent data) {
                     switch (resultCode) {
                         case MNScanManager.RESULT_SUCCESS:
-                            String resultSuccess = data.getStringExtra(MNScanManager.INTENT_KEY_RESULT_SUCCESS);
+                            ArrayList<String> results = data.getStringArrayListExtra(MNScanManager.INTENT_KEY_RESULT_SUCCESS);
                             break;
                         case MNScanManager.RESULT_FAIL:
                             String resultError = data.getStringExtra(MNScanManager.INTENT_KEY_RESULT_ERROR);
