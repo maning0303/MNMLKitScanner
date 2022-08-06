@@ -7,6 +7,7 @@ def dependenciesOther = rootProject.ext.dependenciesOther
 
 android {
     compileSdkVersion versions.compileSdkVersion
+    ndkVersion "20.1.5948944"
     defaultConfig {
         applicationId appId.app
         minSdkVersion versions.minSdkVersion
@@ -46,6 +47,8 @@ dependencies {
     implementation 'androidx.camera:camera-camera2:1.0.2'
     implementation 'androidx.camera:camera-lifecycle:1.0.2'
     implementation 'androidx.camera:camera-view:1.0.0-alpha25'
+
+    implementation 'com.google.zxing:core:3.3.3'
 
 
 }

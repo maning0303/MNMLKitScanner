@@ -34,4 +34,6 @@ dependencies {
     compileOnly "androidx.camera:camera-lifecycle:1.0.2"
     compileOnly "androidx.camera:camera-view:1.0.0-alpha25"
 
+    compileOnly 'com.google.zxing:core:3.3.3'
+
 }

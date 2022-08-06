@@ -78,7 +78,6 @@ public class ScanPreviewActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             StatusBarUtil.setTransparentForWindow(this);
             int statusBarHeight = StatusBarUtil.getStatusBarHeight(mContext);
-            Log.e("======", "statusBarHeight--" + statusBarHeight);
             ViewGroup.LayoutParams fakeStatusBarLayoutParams = fakeStatusBar.getLayoutParams();
             fakeStatusBarLayoutParams.height = statusBarHeight;
             fakeStatusBar.setLayoutParams(fakeStatusBarLayoutParams);
@@ -287,7 +286,7 @@ public class ScanPreviewActivity extends AppCompatActivity {
                                             }
                                             ArrayList<String> results = new ArrayList<>();
                                             for (Barcode barcode : barcodes) {
-                                                String value = barcode.getRawValue();
+                                                String value = barcode.getDisplayValue();
                                                 Log.e("======", "value:" + value);
                                                 results.add(value);
                                             }
