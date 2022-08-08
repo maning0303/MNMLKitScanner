@@ -40,7 +40,7 @@ dependencies {
 
     //扫码核心库
     implementation project(path: ':mlkit-scanner')
-//    implementation 'com.github.maning0303:MNMLKitScanner:V1.0.1'
+//    implementation 'com.github.maning0303:MNMLKitScanner:V1.0.4'
 
     implementation 'com.google.mlkit:barcode-scanning:17.0.2'
     implementation 'androidx.camera:camera-core:1.0.2'

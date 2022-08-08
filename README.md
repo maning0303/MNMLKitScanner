@@ -39,7 +39,7 @@
 ``` gradle
 	dependencies {
 
-            implementation 'com.github.maning0303:MNMLKitScanner:Vx.x.x'
+            implementation 'com.github.maning0303:MNMLKitScanner:V1.0.4'
             //下面版本自己控制，barcode-scanning>=17.0.2
             implementation 'com.google.mlkit:barcode-scanning:17.0.2'
             implementation "androidx.camera:camera-core:1.0.2"
