@@ -9,6 +9,7 @@
     3: 相机可以调整焦距放大缩小
     4: 完全自定义遮罩层
     5: 支持微信多个二维码/条形码同时扫描
+    6: 可调整扫描框大小
 
 
 ## 截图:
@@ -38,8 +39,8 @@
 ``` gradle
 	dependencies {
 
-            implementation 'com.github.maning0303:MNMLKitScanner:V1.0.1'
-            //下面版本自己控制
+            implementation 'com.github.maning0303:MNMLKitScanner:V1.0.2'
+            //下面版本自己控制，barcode-scanning>=17.0.2
             implementation 'com.google.mlkit:barcode-scanning:17.0.0'
             implementation "androidx.camera:camera-core:1.0.2"
             implementation "androidx.camera:camera-camera2:1.0.2"
@@ -109,6 +110,8 @@
                     .setResultPointConfigs(36, 12, 3, colorResultPointStroke, colorResultPoint)
                     //状态栏设置
                     .setStatusBarConfigs(colorStatusBar, true)
+                    //扫描框宽度大小比例，非全屏模式下生效，默认0.7，范围0.5-0.9
+                    .setScanFrameSizeScale(0.7f)
                     //自定义遮罩
                     .setCustomShadeViewLayoutID(R.layout.layout_custom_view, new MNCustomViewBindCallback() {
                         @Override
