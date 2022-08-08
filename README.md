@@ -50,6 +50,17 @@
 	}
 ```
 
+#### 3.如果想加入二维码生成功能
+``` gradle
+	dependencies {
+            
+         implementation 'com.google.zxing:core:3.3.3'
+
+	}
+```
+com.maning.mlkitscanner.scan.utils.ZXingUtils 有具体的方法，详细可以查看Demo
+
+
 ## 使用方法:
 ###  进入需要提前申请相机权限；进入需要提前申请相机权限；进入需要提前申请相机权限；
 
