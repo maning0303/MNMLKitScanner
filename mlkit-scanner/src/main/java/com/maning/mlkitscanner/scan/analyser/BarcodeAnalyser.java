@@ -13,10 +13,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.mlkit.vision.barcode.Barcode;
 import com.google.mlkit.vision.barcode.BarcodeScanner;
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions;
 import com.google.mlkit.vision.barcode.BarcodeScanning;
+import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 import com.maning.mlkitscanner.scan.callback.OnCameraAnalyserCallback;
 import com.maning.mlkitscanner.scan.utils.ImageUtils;
@@ -105,8 +105,8 @@ public class BarcodeAnalyser implements ImageAnalysis.Analyzer {
                         }
                         isAnalyze = false;
                         for (Barcode barcode : barcodes) {
-                            String value = barcode.getRawValue();
-                            Log.e("======", "value:" + value);
+                            Log.i("======", "barcode-getDisplayValue:" + barcode.getDisplayValue());
+                            Log.i("======", "barcode-getRawValue:" + barcode.getRawValue());
                         }
                         if (onCameraAnalyserCallback != null) {
                             onCameraAnalyserCallback.onSuccess(finalBitmap, barcodes);

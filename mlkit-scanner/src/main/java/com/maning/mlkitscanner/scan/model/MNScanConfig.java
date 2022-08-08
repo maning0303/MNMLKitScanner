@@ -71,6 +71,8 @@ public class MNScanConfig implements Serializable {
     private String statusBarColor = "#00000000";
     //状态栏是否显示黑色字体
     private boolean statusBarDarkMode = false;
+    //扫描框宽度大小比例，非全屏模式下生效，默认0.7，范围0.5-0.9
+    private float scanFrameSizeScale = 0.7f;
 
     private MNScanConfig() {
 
@@ -102,6 +104,7 @@ public class MNScanConfig implements Serializable {
         resultPointColor = builder.resultPointColor;
         statusBarColor = builder.statusBarColor;
         statusBarDarkMode = builder.statusBarDarkMode;
+        scanFrameSizeScale = builder.scanFrameSizeScale;
 
     }
 
@@ -201,6 +204,16 @@ public class MNScanConfig implements Serializable {
         return isSupportZoom;
     }
 
+    public float getScanFrameSizeScale() {
+        if (scanFrameSizeScale > 0.9) {
+            scanFrameSizeScale = 0.9f;
+        }
+        if (scanFrameSizeScale < 0.5) {
+            scanFrameSizeScale = 0.5f;
+        }
+        return scanFrameSizeScale;
+    }
+
     public static class Builder {
         private boolean showPhotoAlbum = true;
         private boolean showBeep = true;
@@ -242,6 +255,8 @@ public class MNScanConfig implements Serializable {
         private String statusBarColor = "#00000000";
         //状态栏是否显示黑色字体
         private boolean statusBarDarkMode = false;
+        //扫描框宽度大小比例，非全屏模式下生效，默认0.7，范围0.5-0.9
+        private float scanFrameSizeScale = 0.7f;
 
         public MNScanConfig builder() {
             return new MNScanConfig(this);
@@ -360,6 +375,11 @@ public class MNScanConfig implements Serializable {
 
         public Builder setSupportZoom(boolean supportZoom) {
             isSupportZoom = supportZoom;
+            return this;
+        }
+
+        public Builder setScanFrameSizeScale(float widthScale) {
+            scanFrameSizeScale = widthScale;
             return this;
         }
 

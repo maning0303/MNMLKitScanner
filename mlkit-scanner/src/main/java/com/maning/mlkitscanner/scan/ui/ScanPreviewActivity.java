@@ -21,7 +21,7 @@ import androidx.camera.view.PreviewView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.mlkit.vision.barcode.Barcode;
+import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 import com.maning.mlkitscanner.R;
 import com.maning.mlkitscanner.scan.MNScanManager;
@@ -118,7 +118,7 @@ public class ScanPreviewActivity extends AppCompatActivity {
                 result_point_view.setDatas(barcodes, bitmap);
                 result_point_view.setVisibility(View.VISIBLE);
                 if (barcodes.size() == 1) {
-                    finishSuccess(barcodes.get(0).getRawValue());
+                    finishSuccess(barcodes.get(0).getDisplayValue());
                 }
             }
         });

@@ -19,7 +19,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import com.google.mlkit.vision.barcode.Barcode;
+import com.google.mlkit.vision.barcode.common.Barcode;
 import com.maning.mlkitscanner.scan.analyser.BarcodeAnalyser;
 import com.maning.mlkitscanner.scan.callback.OnCameraAnalyserCallback;
 import com.maning.mlkitscanner.scan.model.MNScanConfig;

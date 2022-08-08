@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.mlkit.vision.barcode.Barcode;
+import com.google.mlkit.vision.barcode.common.Barcode;
 import com.maning.mlkitscanner.R;
 import com.maning.mlkitscanner.scan.model.MNScanConfig;
 import com.maning.mlkitscanner.scan.utils.CommonUtils;
@@ -217,7 +217,7 @@ public class ScanResultPointView extends FrameLayout {
                 @Override
                 public void onClick(View v) {
                     if (onResultPointClickListener != null) {
-                        onResultPointClickListener.onPointClick(barcode.getRawValue());
+                        onResultPointClickListener.onPointClick(barcode.getDisplayValue());
                     }
                 }
             });

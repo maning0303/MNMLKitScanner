@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -97,6 +98,8 @@ public class CustomConfigActivity extends AppCompatActivity implements View.OnCl
      */
     private CheckBox mCbStatusDark;
     private TextView mBtnColorStatusbarBg;
+    private SeekBar mSbarFrameSize;
+    private TextView mTvFrameSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,13 +131,35 @@ public class CustomConfigActivity extends AppCompatActivity implements View.OnCl
         mCbStatusDark = (CheckBox) findViewById(R.id.cb_status_dark);
         mBtnColorStatusbarBg = (TextView) findViewById(R.id.btn_color_statusbar_bg);
         mBtnColorStatusbarBg.setOnClickListener(this);
+        mTvFrameSize = (TextView) findViewById(R.id.tv_frameSize);
+        mSbarFrameSize = (SeekBar) findViewById(R.id.sbar_frameSize);
+        mSbarFrameSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                if (mSbarFrameSize.getProgress() < 50) {
+                    mSbarFrameSize.setProgress(50);
+                }
+                if (mSbarFrameSize.getProgress() > 90) {
+                    mSbarFrameSize.setProgress(90);
+                }
+                mTvFrameSize.setText("扫描框大小比例：" + (mSbarFrameSize.getProgress() / 100f) + "\n（非全屏模式生效，范围0.5-0.9）");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            default:
-                break;
             case R.id.btn_color_picker_text:
                 new ColorPickerPopup.Builder(this)
                         .initialColor(Color.parseColor(colorText))
@@ -207,6 +232,8 @@ public class CustomConfigActivity extends AppCompatActivity implements View.OnCl
                             }
                         });
                 break;
+            default:
+                break;
         }
     }
 
@@ -257,6 +284,8 @@ public class CustomConfigActivity extends AppCompatActivity implements View.OnCl
                 .setResultPointConfigs(36, 12, 3, colorResultPointStroke, colorResultPoint)
                 //状态栏设置
                 .setStatusBarConfigs(colorStatusBar, mCbStatusDark.isChecked())
+                //扫描框宽度大小比例，非全屏模式下生效，默认0.7，范围0.5-0.9
+                .setScanFrameSizeScale(mSbarFrameSize.getProgress() / 100f)
                 //自定义遮罩
                 .setCustomShadeViewLayoutID(mCbCustomView.isChecked() ? R.layout.layout_custom_view : 0, new MNCustomViewBindCallback() {
                     @Override

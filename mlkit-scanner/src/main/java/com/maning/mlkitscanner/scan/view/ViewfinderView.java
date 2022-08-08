@@ -214,7 +214,7 @@ public final class ViewfinderView extends View {
         int height = canvas.getHeight();
         int txtMargin = CommonUtils.dip2px(getContext(), 20);
 
-        int frameWidth = width * 7 / 10;
+        int frameWidth = (int) (width * this.mnScanConfig.getScanFrameSizeScale());
         if (mnScanConfig != null && mnScanConfig.isFullScreenScan()) {
             frameWidth = width * 9 / 10;
         }

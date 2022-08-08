@@ -58,7 +58,7 @@
                 android:id="@+id/cb_fullscreen_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="是否需要全屏扫描识别（默认）" />
 
             <CheckBox
@@ -262,6 +262,32 @@
                         android:text="网格" />
 
                 </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_frameSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="扫描框大小比例:0.7\n（非全屏模式生效，范围0.5-0.9）"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbar_frameSize"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:max="100"
+                    android:progress="70" />
 
             </LinearLayout>
 

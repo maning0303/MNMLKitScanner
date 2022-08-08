@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_custom_config.xml" value="0.18135528564453127" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="mlkit-scanner/src/main/res/layout/mn_scan_activity_scan_preview.xml" value="0.1" />
       </map>

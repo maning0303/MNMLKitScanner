@@ -42,7 +42,7 @@ dependencies {
     implementation project(path: ':mlkit-scanner')
 //    implementation 'com.github.maning0303:MNMLKitScanner:V1.0.1'
 
-    implementation 'com.google.mlkit:barcode-scanning:17.0.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.2'
     implementation 'androidx.camera:camera-core:1.0.2'
     implementation 'androidx.camera:camera-camera2:1.0.2'
     implementation 'androidx.camera:camera-lifecycle:1.0.2'
